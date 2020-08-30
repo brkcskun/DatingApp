@@ -31,7 +31,6 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto)
         {
             //validate request
-
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
