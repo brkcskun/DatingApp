@@ -13,6 +13,7 @@ export class AuthService {
   login(model: any) {
     return this.http.post(this.baseUrl + "login", model).pipe(
       map((response: any) => {
+        debugger;
         const userObject = response;
         if (userObject) {
           localStorage.setItem("token", userObject.token);
